@@ -8,6 +8,7 @@
 %section {
   @include lg-min {
     padding: $gap - 10px;
+    padding-bottom: $gap * 5;
     padding-top: $gap * 5;
   }
   @include lg-md {
