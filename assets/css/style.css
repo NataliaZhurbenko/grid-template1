@@ -748,24 +748,15 @@ a {
   display: grid;
 }
 
+.about__image {
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
+}
+
 .about__content p {
   font-size: 1.125rem;
-}
-
-h2 {
-  letter-spacing: 0.1em;
-  color: #2d3651;
-  font-family: "Roboto Slab", serif;
-  line-height: 1.2em;
-}
-
-.posts h2,
-.about h2 {
-  margin-top: 0;
-}
-
-p {
-  color: #637588;
 }
 
 .about__content p:first-of-type {
@@ -786,15 +777,24 @@ p {
   margin: 0;
 }
 
-img {
-  border-style: none;
+h2 {
+  letter-spacing: 0.1em;
+  color: #2d3651;
+  font-family: "Roboto Slab", serif;
+  line-height: 1.2em;
 }
 
-.about__image {
-  display: grid;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  justify-items: center;
+.posts h2,
+.about h2 {
+  margin-top: 0;
+}
+
+p {
+  color: #637588;
+}
+
+img {
+  border-style: none;
 }
 
 .about__image img {
@@ -860,12 +860,12 @@ img {
     gap: 100px;
     grid-template-columns: 1fr 271px;
   }
+  .about__content p:first-of-type::after {
+    right: -50px;
+  }
   h2 {
     margin-bottom: 3rem;
     font-size: 2.5rem;
-  }
-  .about__content p:first-of-type::after {
-    right: -50px;
   }
 }
 
@@ -891,12 +891,12 @@ img {
     gap: 40px;
     grid-template-columns: 1fr 271px;
   }
+  .about__content p:first-of-type::after {
+    right: -20px;
+  }
   h2 {
     margin-bottom: 2.625rem;
     font-size: 2rem;
-  }
-  .about__content p:first-of-type::after {
-    right: -20px;
   }
 }
 
@@ -948,12 +948,12 @@ img {
     gap: 20px;
     grid-template-columns: 1fr 236px;
   }
+  .about__content p:first-of-type::after {
+    right: -10px;
+  }
   h2 {
     margin-bottom: 2.25rem;
     font-size: 1.5rem;
-  }
-  .about__content p:first-of-type::after {
-    right: -10px;
   }
 }
 
@@ -992,12 +992,12 @@ img {
     gap: 20px;
     grid-template-columns: 1fr;
   }
+  .about__content p:first-of-type::after {
+    display: none;
+  }
   h2 {
     margin-bottom: 2.25rem;
     text-align: center;
     font-size: 1.5rem;
-  }
-  .about__content p:first-of-type::after {
-    display: none;
   }
 }
