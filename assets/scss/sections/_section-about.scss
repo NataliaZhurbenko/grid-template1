@@ -1,21 +1,59 @@
 .about {
   letter-spacing: 0.055em;
-  background-color: #e5e5e5;
+  background-color: $color-gray-light;
+  @extend %section;
 }
 
 .about__container {
   display: grid;
-  max-width: 1340px;
-  margin: auto;
-  padding-right: 20px;
-  padding-left: 20px;
+  @extend %container;
+  @include lg-min {
+    gap: $gap * 5;
+    grid-template-columns: 1fr 271px;
+  }
+  @include lg-md {
+    gap: $gap * 2;
+    grid-template-columns: 1fr 271px;
+  }
+  @include md-sm {
+    gap: $gap;
+    grid-template-columns: 1fr 236px;
+  }
+  @include sm {
+    gap: $gap;
+    grid-template-columns: 1fr;
+  }
+}
+
+.about__content p {
+  font-size: 1.125rem;
 }
 
 h2 {
   letter-spacing: 0.1em;
-  color: #2d3651;
-  font-family: "Roboto Slab", serif;
+  color: $color-primary;
+  font-family: $font-header;
   line-height: 1.2em;
+
+  @include lg-min {
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+  }
+  @include lg-md {
+    margin-bottom: 2.625rem;
+    font-size: 2rem;
+  }
+
+  @include md-sm {
+    margin-bottom: 2.25rem;
+    font-size: 1.5rem;
+  }
+
+  @include sm {
+    margin-bottom: 2.25rem;
+    text-align: center;
+    font-size: 1.5rem;
+  }
 }
 .posts h2,
 .about h2 {
@@ -23,7 +61,7 @@ h2 {
 }
 
 p {
-  color: #637588;
+  color: $color-gray;
 }
 
 .about__content p:first-of-type {
@@ -39,6 +77,19 @@ p {
   height: 200px;
   content: "";
   background-color: rgba(99, 117, 136, 0.1);
+
+  @include lg-min {
+    right: -$gap * 2.5;
+  }
+  @include lg-md {
+    right: -$gap;
+  }
+  @include md-sm {
+    right: -$gap / 2;
+  }
+  @include sm {
+    display: none;
+  }
 }
 
 .about__content p:last-of-type {

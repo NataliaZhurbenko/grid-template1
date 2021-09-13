@@ -4,3 +4,18 @@
   padding-left: $gap;
   padding-right: $gap;
 }
+
+%section {
+  @include lg-min {
+    padding: $gap - 10px;
+    padding-top: $gap * 5;
+  }
+  @include lg-md {
+    padding: $gap - 10px;
+    padding-bottom: $gap * 4;
+  }
+  @include md {
+    padding: $gap - 10px;
+    padding-bottom: $gap * 3;
+  }
+}

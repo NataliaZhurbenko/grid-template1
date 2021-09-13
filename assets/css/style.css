@@ -348,7 +348,7 @@ template {
 /* sm */
 /* xs */
 /* xx */
-.header-menu__container, .header-content__container {
+.header-menu__container, .header-content__container, .about__container {
   max-width: 1340px;
   margin: auto;
   padding-left: 20px;
@@ -746,10 +746,10 @@ a {
 
 .about__container {
   display: grid;
-  max-width: 1340px;
-  margin: auto;
-  padding-right: 20px;
-  padding-left: 20px;
+}
+
+.about__content p {
+  font-size: 1.125rem;
 }
 
 h2 {
@@ -839,6 +839,10 @@ img {
 }
 
 @media (min-width: 992px) {
+  .about {
+    padding: 10px;
+    padding-top: 100px;
+  }
   h1 {
     font-size: 3.75rem;
   }
@@ -852,9 +856,24 @@ img {
     grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
     grid-template-columns: repeat(4, 1fr);
   }
+  .about__container {
+    gap: 100px;
+    grid-template-columns: 1fr 271px;
+  }
+  h2 {
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+  }
+  .about__content p:first-of-type::after {
+    right: -50px;
+  }
 }
 
 @media (max-width: 991.8px) and (min-width: 768px) {
+  .about {
+    padding: 10px;
+    padding-bottom: 80px;
+  }
   h1 {
     font-size: 2.5rem;
   }
@@ -868,9 +887,24 @@ img {
     grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
     grid-template-columns: repeat(3, 1fr);
   }
+  .about__container {
+    gap: 40px;
+    grid-template-columns: 1fr 271px;
+  }
+  h2 {
+    margin-bottom: 2.625rem;
+    font-size: 2rem;
+  }
+  .about__content p:first-of-type::after {
+    right: -20px;
+  }
 }
 
 @media (max-width: 767.8px) {
+  .about {
+    padding: 10px;
+    padding-bottom: 60px;
+  }
   h1 {
     font-size: 1.875rem;
   }
@@ -910,6 +944,17 @@ img {
     grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
     grid-template-columns: repeat(2, 1fr);
   }
+  .about__container {
+    gap: 20px;
+    grid-template-columns: 1fr 236px;
+  }
+  h2 {
+    margin-bottom: 2.25rem;
+    font-size: 1.5rem;
+  }
+  .about__content p:first-of-type::after {
+    right: -10px;
+  }
 }
 
 @media (max-height: 690px) {
@@ -942,5 +987,17 @@ img {
     gap: 20px;
     grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
     grid-template-columns: 1fr;
+  }
+  .about__container {
+    gap: 20px;
+    grid-template-columns: 1fr;
+  }
+  h2 {
+    margin-bottom: 2.25rem;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .about__content p:first-of-type::after {
+    display: none;
   }
 }
